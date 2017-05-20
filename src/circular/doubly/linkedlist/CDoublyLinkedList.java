@@ -61,11 +61,9 @@ public class CDoublyLinkedList<T> {
 	}
 	
 	protected void find(T target)
-    // Searches list for an occurrence of an element e such that
-    // e.equals(target). If successful, sets instance variables
-    // found to true, location to node containing e, and previous
-    // to the node that links to location. If not successful, sets 
-    // found to false.
+    // Searches list for an occurrence of an element. If successful, sets instance variables
+    // found to true, location to node containing the element, and previous
+    // to the node that links to location. If not successful, sets found to false.
     {
       location = head;
       found = false;
