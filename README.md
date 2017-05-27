@@ -1,3 +1,3 @@
-# Java Circular Doubly Linked List
+# Circular Doubly Linked List - Java 
 
                            
