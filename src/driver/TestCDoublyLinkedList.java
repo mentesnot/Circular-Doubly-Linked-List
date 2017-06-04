@@ -15,14 +15,14 @@ public class TestCDoublyLinkedList {
 
 	public static void main(String[] args) {
 		
-		   //Creates CDoublyLinkedList cdll - 4 ,3 , 2, 1
+		   //Creates CDoublyLinkedList cdll - 1,2,3,4
 		
 		   CDoublyLinkedList<Integer> cdll = new CDoublyLinkedList<Integer>(); 
 		   
-		   cdll.add(4);        //adds items to the list
-		   cdll.add(3);
+		   cdll.add(1);        //adds items to the list
 		   cdll.add(2);
-		   cdll.add(1);
+		   cdll.add(3);
+		   cdll.add(4);
 		   
 		   System.out.println("\nOriginal list: ");
 		   System.out.println(cdll.toString());  //prints the original list
@@ -56,7 +56,7 @@ public class TestCDoublyLinkedList {
 		   cdll.removeAtPosition(1);					//removes the item in the specified position
 		   System.out.println(cdll.toString());		//Expected output 1,2,3
 		   
-		   System.out.println("\nprintBack()");
+		   System.out.println("\nprintReverse()");
 		   System.out.println(cdll.printReverse());   //prints the list backwards
 		   										      //Expected output 3,2,1
 		   

@@ -136,25 +136,22 @@ public class CDoublyLinkedList<T> {
 	{
 		 DLLNode<T> newNode = new DLLNode<T>(data);   // Reference to new node being added
 	   	    	 
-	   	 if (isEmpty())            // Adding into an empty list
+		 if (isEmpty())            // Adding into an empty list
 	   	 {
 	   		 head = newNode;
 	   	     tail = newNode;   	    
 	   	     head.setPrevious(tail);
-	   	     tail.setNext(head);	     
+	   	     tail.setNext(head);	   	 
 	   	 }
 	   	 else                      // Adding into a non-empty list
 	   	 {
-	   		newNode.setNext(head);
-	   		head.setPrevious(newNode);
-	   	    head = newNode;
-	   	    head.setPrevious(tail);
-	   	    tail.setNext(head);
-	   	    
-	   	    
+	   		 tail.setNext(newNode);
+	   		 newNode.setPrevious(tail);
+	   	     tail = newNode;
+	   	     tail.setNext(head);
 	   	 }
-	   	 numElements++;	
-	 }
+	   	 numElements++;	 
+	}
 
     
     public void addFront(T data) 
@@ -288,9 +285,9 @@ public class CDoublyLinkedList<T> {
 	 //removes the first element in the list
 	 {
 		 
-	        if(!isEmpty()){    
-	        	if(size()== 1){  //if the first element is the only element in the list,
-	        		             //it empties the list
+	        if(!isEmpty()){  
+	        	
+	        	if(head.getNext() == head){  //if the first element is the only element in the list,	        		             //it empties the list
 	        		head = null;
 	        		tail = null;
 	        	}else{			//removes the first element
@@ -308,7 +305,7 @@ public class CDoublyLinkedList<T> {
 		 
 	     if(!isEmpty()){
 	    	 
-	    	 if(size() == 1){ //if the last element is the only element in the list,
+	    	 if(head.getNext() == head){ //if the last element is the only element in the list,
 	                          //it empties the list      	
 	    		 head = null;
 	    		 tail = null;
@@ -328,7 +325,7 @@ public class CDoublyLinkedList<T> {
 			 head = head.getNext();	
 			 head.setPrevious(tail);
              tail.setNext(head);   
-		 }else if(position >= size() - 1){ //remove last elemnt
+		 }else if(position >= size() - 1){ //remove last element
 			 
 			 tail = tail.getPrevious(); 
 	         tail.setNext(head);
@@ -359,8 +356,9 @@ public class CDoublyLinkedList<T> {
         			item += current.getData() + " ";
         			current = current.getNext();
         		}while(current != head);
-    			item += "]";
+    			
     		}
+    		item += "]";
         return item;
 
     }
