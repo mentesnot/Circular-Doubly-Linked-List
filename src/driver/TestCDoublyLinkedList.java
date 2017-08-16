@@ -15,7 +15,7 @@ public class TestCDoublyLinkedList {
 
 	public static void main(String[] args) {
 		
-		   //Creates CDoublyLinkedList cdll - 1,2,3,4
+		   //Creates CDoublyLinkedList cdll - 1, 2, 3, 4
 		
 		   CDoublyLinkedList<Integer> cdll = new CDoublyLinkedList<Integer>(); 
 		   
