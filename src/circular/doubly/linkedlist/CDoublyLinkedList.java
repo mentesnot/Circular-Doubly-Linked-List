@@ -134,9 +134,9 @@ public class CDoublyLinkedList<T> {
 	public void add(T data)
 	// Adds element to this list.
 	{
-		 DLLNode<T> newNode = new DLLNode<T>(data);   // Reference to new node being added
-	   	    	 
-		 if (isEmpty())            // Adding into an empty list
+		DLLNode<T> newNode = new DLLNode<T>(data);   // Reference to the new node being added
+	   	
+	   	 if (isEmpty())            // Adding into an empty list
 	   	 {
 	   		 head = newNode;
 	   	     tail = newNode;   	    
@@ -150,7 +150,7 @@ public class CDoublyLinkedList<T> {
 	   	     tail = newNode;
 	   	     tail.setNext(head);
 	   	 }
-	   	 numElements++;	 
+	   	 numElements++;
 	}
 
     
