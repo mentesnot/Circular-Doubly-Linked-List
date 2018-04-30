@@ -18,4 +18,8 @@ This Circular-doubly-linked list project contains the following methods:
 * **toString()** 			         - outputs the elements in the list in forward order
 * **printReverse()**           - outputs the element in the list in reverse order
 
+
+![screenshot](https://user-images.githubusercontent.com/28815677/39442761-502d7984-4c80-11e8-8440-110d6bf1af5d.JPG)
+
+
                            
